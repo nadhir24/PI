@@ -10,3 +10,4 @@
       <link rel="stylesheet" href=" {{ asset('/css/Article-Clean.css') }} ">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
       <link rel="stylesheet" href=" {{ asset('/css/smoothproducts.css') }} ">
+      @yield('style')
