@@ -12,11 +12,11 @@
 					</a>
 					<div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item"  href="javascript:;"> Profile</a>
-						<a class="dropdown-item"  href="javascript:;">
+						{{-- <a class="dropdown-item"  href="javascript:;">
 							<span class="badge bg-red pull-right">50%</span>
 							<span>Settings</span>
-						</a>
-						<a class="dropdown-item"  href="javascript:;">Help</a>
+						</a> --}}
+						{{-- <a class="dropdown-item"  href="javascript:;">Help</a> --}}
 						<form method="POST" action="{{ route('logout') }}">
 							@csrf
 							<button type="submit" class="btn btn-primary w-100">Log Out</button>
@@ -25,7 +25,7 @@
 					</div>
 				</li>
 
-				<li role="presentation" class="nav-item dropdown open">
+				{{-- <li role="presentation" class="nav-item dropdown open">
 					<a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
 						<i class="fa fa-envelope-o"></i>
 						<span class="badge bg-green">6</span>
@@ -88,7 +88,7 @@
 							</div>
 						</li>
 					</ul>
-				</li>
+				</li> --}}
 			</ul>
 		</nav>
 	</div>

@@ -26,7 +26,21 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        $data = Article::all();
+        $data = Article::where('category', 'artikel')->get();
+
+        return view('artikel.index', ['tab_name' => 'Artikel', 'data_artikel' => $data]);
+    }
+
+    public function index_berita()
+    {
+        $data = Article::where('category', 'berita')->get();
+
+        return view('artikel.index', ['tab_name' => 'Artikel', 'data_artikel' => $data]);
+    }
+
+    public function index_analisa()
+    {
+        $data = Article::where('category', 'analisa')->get();
 
         return view('artikel.index', ['tab_name' => 'Artikel', 'data_artikel' => $data]);
     }

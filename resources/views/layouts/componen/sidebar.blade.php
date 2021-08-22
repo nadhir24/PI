@@ -1,7 +1,11 @@
 <div class="col-md-3 left_col">
 	<div class="left_col scroll-view">
-		<div class="navbar nav_title" style="border: 0;">
+		{{-- <div class="navbar nav_title" style="border: 0;">
 			<a href="/dashboard" class="site_title"><img src="{{ asset('images/logo-white.png') }}" class="img-fluid" style="width: 80px;" alt=""></a>
+		</div> --}}
+
+		<div class="navbar nav_title" style="border: 0;">
+			<a href="{{ route('home') }}" class="site_title"><span>Forex Academy</span></a>
 		</div>
 
 		<div class="clearfix"></div>
@@ -37,6 +41,13 @@
 						<ul class="nav child_menu">
 							<li><a href="{{ route('admin_system.index') }}">Daftar Konten</a></li>
 							<li><a href="{{ route('artikel.create') }}">Tambah Konten</a></li>
+						</ul>
+					</li>
+					<li>
+						<a><i class="fa fa-user"></i> Users <span class="fa fa-chevron-down"></span></a>
+						<ul class="nav child_menu">
+							<li><a href="{{ route('admin_user.index') }}">Daftar User</a></li>
+							{{-- <li><a href="{{ route('artikel.create') }}">Tambah Konten</a></li> --}}
 						</ul>
 					</li>
 {{-- 					

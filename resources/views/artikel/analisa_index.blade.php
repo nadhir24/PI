@@ -42,16 +42,6 @@
         </div>
         <div class="container">
             <div class="row">
-              {{-- {{ dd($data_artikel->all()) }} --}}
-              @empty($data_artikel->all())
-              <div class="col-12">
-                <div class="alert alert-danger" role="alert">
-                  Artikel Tidak Ada
-                </div>
-              </div>
-
-              @endempty
-              
               @foreach ($data_artikel as $item)
                     {{-- <div class="col-xs-12 col-sm-4">
                         <div class="card">
@@ -79,13 +69,7 @@
                   <div class="card">
                     <img class="card-img post-thumbnail" src="{{ asset('/images_article/' . $item->img_banner) }}" alt="Bologna">
                     <div class="card-img-overlay">
-                      @if ($item->category == 'Artikel')
-                        <a href="#" class="btn btn-sm btn-primary">{{ $item->category }}</a>
-                      @elseif ($item->category == 'Berita')
-                        <a href="#" class="btn btn-sm btn-success">{{ $item->category }}</a>
-                      @elseif ($item->category == 'Analisa')
-                        <a href="#" class="text-white btn btn-sm btn-warning">{{ $item->category }}</a>
-                      @endif
+                      <a href="#" class="btn btn-success btn-sm">{{ $item->category }}</a>
                     </div>
                     <div class="card-body">
                       <h6 class="card-title"><a href="{{ route('artikel.show', $item->id) }}" class="link-title">{{ $item->title }}</a></h6>
@@ -112,8 +96,6 @@
                   </div>
                 </div>
               @endforeach
-                
-
             </div>
         </div>
     </section>

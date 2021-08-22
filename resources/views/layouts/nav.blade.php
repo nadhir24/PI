@@ -8,7 +8,7 @@
                 href="{{ route('home') }}">Home</a></li>
                 <li class="nav-item {{ request()->is('artikel.index') ? 'active' : '' }}"><a class="nav-link" href="{{ route('artikel.index') }}">artikel</a></li>
                 <li class="nav-item {{ request()->is('berita') ? 'active' : '' }}"><a class="nav-link" href="{{ route('berita') }}">berita</a></li>
-                <li class="nav-item"><a class="nav-link" href="about-us.html">analisa</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('analisa') }}">analisa</a></li>
                 <li class="nav-item {{ request()->is('contact') ? 'active' : '' }}"><a class="nav-link" href="{{ route('contact') }}">Kontak</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">faq</a></li>
               {{-- </ul><a href="login.html">login/register</a> --}}

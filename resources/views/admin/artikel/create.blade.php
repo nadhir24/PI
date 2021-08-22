@@ -46,7 +46,7 @@
             <div class="form-group">
               <label for="category">Kategori</label>
               <select class="form-control" id="category" name="category">
-                <option value="">-- Pilih Kategori ---</option>
+                <option value=""> --- Pilih Kategori --- </option>
                 <option value="Berita" 
                         @if (old('category') == 'Berita')
                           selected
