@@ -6,7 +6,7 @@
         <div class="x_panel">
           <div class="x_content">
 
-            <table class="table">
+            <table class="table table-sm">
               <caption>List of users</caption>
               <thead>
                 <tr>
@@ -35,12 +35,7 @@
                         @method('PUT')
                         
                         @if ($user->role == 'user')
-                        
                           <button class="btn btn-info btn-sm" type="submit">Jadikan Admin</button>
-
-                        @elseif ($user->role == 'admin')
-                        
-                          <button class="btn btn-warning btn-sm" type="submit">Jadikan User</button>
                         @endif
                       </form>
                     </td>

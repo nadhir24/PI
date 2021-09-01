@@ -10,7 +10,7 @@
                 <li class="nav-item {{ request()->is('berita') ? 'active' : '' }}"><a class="nav-link" href="{{ route('berita') }}">berita</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('analisa') }}">analisa</a></li>
                 <li class="nav-item {{ request()->is('contact') ? 'active' : '' }}"><a class="nav-link" href="{{ route('contact') }}">Kontak</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">faq</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('faq') }}">faq</a></li>
               {{-- </ul><a href="login.html">login/register</a> --}}
               @auth
                   @if (auth()->user()->role == 'admin')

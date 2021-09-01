@@ -57,7 +57,7 @@ Route::get('/admin_system/artikel', [ArtikelController::class, 'indexAdmin'])
   ->name('admin_system.index');
 
 Route::get('/admin_system/user', function () {
-  $user = User::all();
+  $user = User::orderBy('role')->get();
   return view('admin.user.index')->with(['data_user' => $user]);
 })
   ->middleware([
@@ -87,6 +87,9 @@ Route::put('/admin_system/user/{id}/{role}/edit', function ($id, $role) {
 
 
 Route::post('/article_comment', [CommentController::class, 'store']);
+Route::get('/faq', function () {
+  return view('faq', ['tab_name' => 'FAQ']);
+})->name('faq');
 Route::get('/getCommentArticle/{id?}', [CommentController::class, 'getCommentArticle']);
 Route::delete('/delete_comment', [CommentController::class, 'destroy']);
 
